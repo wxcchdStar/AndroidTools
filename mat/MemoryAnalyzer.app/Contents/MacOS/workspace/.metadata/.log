@@ -1,0 +1,169 @@
+!SESSION 2015-08-10 17:17:55.357 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -keyring /Users/chenhd/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/chenhd/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-08-10 17:20:42.214
+!MESSAGE Heap /Users/chenhd/Downloads/20150810.hprof contains 114,076 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-08-10 17:20:42.555
+!MESSAGE Removed 10,445 unreachable objects using 10,962,024 bytes
+!SESSION 2015-10-15 16:53:55.203 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -keyring /Users/chenhd/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/chenhd/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-15 16:54:35.080
+!MESSAGE Heap /Users/chenhd/Desktop/0315.hprof contains 329,581 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-15 16:54:36.045
+!MESSAGE Removed 46,827 unreachable objects using 2,502,312 bytes
+!SESSION 2015-10-20 17:04:20.077 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -keyring /Users/chenhd/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/chenhd/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.mat.ui 4 0 2015-10-20 17:04:23.697
+!MESSAGE Error opening heap dump '0315.hprof'. Check the error log for further details.
+!STACK 0
+org.eclipse.mat.SnapshotException: Error opening heap dump '0315.hprof'. Check the error log for further details.
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:268)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.FileNotFoundException: /Users/chenhd/Desktop/0315.hprof (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:75)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	... 4 more
+!SUBENTRY 1 org.eclipse.mat.ui 4 0 2015-10-20 17:04:23.697
+!MESSAGE /Users/chenhd/Desktop/0315.hprof (No such file or directory) (java.io.FileNotFoundException)
+!STACK 0
+java.io.FileNotFoundException: /Users/chenhd/Desktop/0315.hprof (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:75)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:04:43.925
+!MESSAGE Heap /Users/chenhd/Desktop/com.kittyplay.ex1111.hprof contains 350,805 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:04:44.638
+!MESSAGE Removed 45,238 unreachable objects using 2,423,208 bytes
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:10:07.572
+!MESSAGE Heap /Users/chenhd/Desktop/com.kittyplay.ex2222.hprof contains 345,090 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:10:08.105
+!MESSAGE Removed 55,175 unreachable objects using 4,598,992 bytes
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:20:14.223
+!MESSAGE Heap /Users/chenhd/Desktop/com.kittyplay.ex3333.hprof contains 346,544 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:20:14.703
+!MESSAGE Removed 46,544 unreachable objects using 2,477,784 bytes
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:55:10.086
+!MESSAGE Heap /Users/chenhd/Desktop/com.kittyplay.ex4444.hprof contains 302,757 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2015-10-20 17:55:10.677
+!MESSAGE Removed 45,909 unreachable objects using 2,453,768 bytes
+
+!ENTRY org.eclipse.osgi 4 0 2015-10-20 18:45:08.559
+!MESSAGE Application error
+!STACK 1
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?))
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4024)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3700)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3762)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:190)
+	at org.eclipse.mat.ui.rcp.Application.start(Application.java:33)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1692)
+	at org.eclipse.mat.ui.snapshot.views.inspector.InspectorView$7$1.run(InspectorView.java:869)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 17 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2015-10-20 18:45:08.571
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:898)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:398)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:148)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:174)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:159)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:106)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:139)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:902)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:165)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:75)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:67)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:102)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:466)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:624)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:159)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1097)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:631)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:3938)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:338)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 23 more
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-10-20 18:45:08.933
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.AnimationManager$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2015-10-20 18:45:08.934
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.ProgressViewUpdater$1

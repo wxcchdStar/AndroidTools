@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+repositories/http\:__download.eclipse.org_mat_1.5_update-site/count=1
+repositories/http\:__download.eclipse.org_mat_1.5_update-site/enabled=true
+repositories/http\:__download.eclipse.org_mat_1.5_update-site/nickname=Memory Analyzer
+repositories/http\:__download.eclipse.org_mat_1.5_update-site/uri=http\://download.eclipse.org/mat/1.5/update-site/
+repositories/http\:__download.eclipse.org_releases_mars/count=1
+repositories/http\:__download.eclipse.org_releases_mars/enabled=true
+repositories/http\:__download.eclipse.org_releases_mars/nickname=Eclipse Mars
+repositories/http\:__download.eclipse.org_releases_mars/uri=http\://download.eclipse.org/releases/mars/

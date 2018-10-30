@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Acquiring Heap Dumps"/>
+<meta name="copyright" content="Copyright (c) 2008, 2014 SAP AG and IBM Corporation. All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html " type="primary"/>
+<meta name="DC.Rights.Owner" content="Copyright (c) 2008, 2014 SAP AG and IBM Corporation. All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html " type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task_acquiringheapdump"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../styles/commonltr.css"/>
+<title>Acquiring Heap Dumps</title>
+</head>
+<body id="task_acquiringheapdump">
+
+
+	<h1 class="title topictitle1">Acquiring Heap Dumps</h1>
+
+	
+
+	<div class="body taskbody">
+		<div class="section context">
+		
+			
+		    <p class="p"><strong class="ph b">HPROF Binary Heap Dumps</strong></p>
+
+		    <p class="p"><em class="ph i">Get Heap Dump on an OutOfMemoryError</em></p>
+
+			<p class="p"> One can get a HPROF binary heap dump on an OutOfMemoryError for Sun JVM
+				(1.4.2_12 or higher and 1.5.0_07 or higher), HP-UX JVM (1.4.2_11 or
+				higher) and SAP JVM (since 1.5.0) by setting the following JVM
+				parameter:</p>
+
+			<div class="p">
+				<pre class="pre codeblock">-XX:+HeapDumpOnOutOfMemoryError</pre>
+
+			</div>
+
+			<p class="p">The heap dump is written to the work directory.</p>
+
+			
+			<p class="p"><em class="ph i">Interactively Trigger a Heap Dump</em></p>
+
+			<p class="p"> To get heap dump on demand one can add the following parameter to the JVM
+				and press CTRL + BREAK in the preferred moment:</p>
+
+			<div class="p">
+				<pre class="pre codeblock">-XX:+HeapDumpOnCtrlBreak</pre>
+
+			</div>
+
+			<p class="p"><em class="ph i">HPROF agent</em></p>
+
+			<p class="p">To use the HPROF agent to generate a dump on the end of execution, or on SIGQUIT signal use the following
+			JVM parameter:</p>
+
+			<div class="p">
+				<pre class="pre codeblock">-agentlib:hprof=heap=dump,format=b</pre>
+
+			</div>
+
+			<p class="p"> Alternatively, other tools can be used to acquire a heap dump:
+			</p>
+
+			<ul class="ul">
+				<li class="li">
+					<span class="keyword cmdname">jmap -dump:format=b,file=&lt;filename.hprof&gt; &lt;pid&gt;</span>
+				</li>
+
+				<li class="li">JConsole (see sample usage in <a class="xref" href="../gettingstarted/basictutorial.html">Basic Tutorial</a>)</li>
+
+				<li class="li">Memory Analyzer (see bottom of page)</li>
+
+			</ul>
+
+				
+			
+			<p class="p"><strong class="ph b">System Dumps and Heap Dumps from IBM Virtual Machines </strong></p>
+
+			<div class="p">
+			Memory Analyzer can also read memory-related information from IBM system
+			dumps and from Portable Heap Dump (PHD) files. For this purpose one just 
+			has to install the IBM DTFJ feature into Memory Analyzer version 0.8 or 
+			later. Follow the <a class="xref" href="http://www.ibm.com/developerworks/java/jdk/tools/dtfj.html">IBM DTFJ feature installation instructions</a>. If the DTFJ
+			feature is successfully installed then
+				<span class="ph menucascade"><span class="ph uicontrol">File</span> &gt; <span class="ph uicontrol">Open Heap Dump</span></span> 
+			menu should also offer the following options for the file types: 
+
+			<ul class="ul">
+				<li class="li">IBM DTFJ for 1.4.2 VMs</li>
+
+				<li class="li">IBM DTFJ for Portable Heap Dumps</li>
+
+				<li class="li">IBM SDK for Java (J9) Javadump</li>
+
+				<li class="li">IBM SDK for Java (J9) System dumps</li>
+
+			</ul>
+
+			</div>
+
+			
+			<p class="p">
+			Minimum-required versions of IBM Virtual Machines to generate the dump are 
+			<strong class="ph b">IBM JDK 1.4.2 SR12, 5.0 SR8a and 6.0 SR2</strong> 
+			though previous versions may generate dumps usable with Memory Analyzer but with inaccurate root information
+			</p>
+
+			
+			<p class="p">
+			<em class="ph i">IBM Java 5.0 and Java 6 Virtual Machine dump options</em>
+			</p>
+
+			
+			<div class="p">
+			A quick reference for <a class="xref" href="http://publib.boulder.ibm.com/infocenter/javasdk/v5r0/index.jsp">IBM Java 5.0</a>
+			and <a class="xref" href="http://publib.boulder.ibm.com/infocenter/javasdk/v6r0/index.jsp">IBM Java 6</a> Virtual Machine command line options: 
+			
+			<pre class="pre codeblock">-Xdump:system+heap+java:events=systhrow+user,filter=java/lang/OutOfMemoryError,request=exclusive+prepwalk+compact</pre>
+
+			</div>
+ 
+			<p class="p">Dump types:</p>
+ 
+			
+			<ul class="ul">
+				<li class="li">system - a system process dump. Process system dump files with jextract before loading them into Memory Analyzer. Do not give them a .sdff extension as that is only used for Java 1.4.2 system dumps</li>
+ 
+				<li class="li">heap - a Portable Heap Dump (PHD) file. Contains all objects and classes, but no thread details </li>
+
+				<li class="li">javacore - a readable file which contains information about class loaders and which can be used by Memory Analyzer when reading PHD files</li>
+
+			</ul>
+
+			 
+			<p class="p">Events:</p>
+ 
+			
+			<ul class="ul">
+				<li class="li">systhrow - when a system generated exception is thrown </li>
+
+				<li class="li">user - the user has typed control-break </li>
+
+			</ul>
+
+			
+			<p class="p">Filter:</p>
+ 
+			<ul class="ul">
+				<li class="li">java/lang/OutOfMemoryError - the type of the systhrow exception</li>
+
+			</ul>
+ 
+			
+			<p class="p">Request:</p>
+ 
+			
+			<ul class="ul">
+				<li class="li">exclusive Stop anything modifying the heap while generating the dump </li>
+
+				<li class="li">prepwalk Make sure the heap is safe to dump </li>
+
+				<li class="li">compact minimise the size of the heap </li>
+
+			</ul>
+
+			
+			<p class="p"><em class="ph i">IBM Java 1.4.2 Virtual Machine dump options</em></p>
+
+			<p class="p">A quick reference for <a class="xref" href="http://publib.boulder.ibm.com/infocenter/javasdk/v1r4m2/index.jsp">IBM Java 1.4.2</a> Virtual Machine dump options</p>
+ 
+			
+			<ul class="ul">
+				<li class="li"><pre class="pre codeblock">export JAVA_DUMP_OPTS=ONOUTOFMEMORY(SYSDUMP,HEAPDUMP,JAVADUMP)</pre>
+</li>
+ 
+				<li class="li"><pre class="pre codeblock">set JAVA_DUMP_OPTS=ONOUTOFMEMORY(SYSDUMP,HEAPDUMP,JAVADUMP)</pre>
+</li>
+
+			</ul>
+ 
+			
+			<p class="p">On non-z/OS systems process any system dump files with JExtract to give a .sdff file. On z/OS systems copy the SVC dump file in binary mode to your Eclipse Memory Analyzer system, giving it a .dmp file extension. 
+			</p>
+
+			
+			
+			
+			<p class="p"><strong class="ph b">Acquire Heap Dump from Memory Analyzer</strong></p>
+
+			<p class="p">
+			If the Java process from which the heap dump is to be acquired is on the 
+			same machine as the Memory Analyzer, it is possible to acquire a heap dump
+			directly from the Memory Analyzer. Dumps acquired this way are directly
+			parsed and opened in tool.
+			</p>
+
+			
+			<p class="p">Acquiring the heap dump is a VM specific. Memory Analyzer comes with 
+			several so called heap dump providers - for Sun based VMs (needs a Sun JDK
+			with jmap) and for IBM VMs (needs an IBM JDK). Also extension points 
+			are provided for adopters to plug-in their own heap dump providers.
+			</p>
+
+			
+			<p class="p">
+			To trigger a heap dump from Memory Analyzer open the 
+				<span class="ph menucascade"><span class="ph uicontrol">File</span> &gt; <span class="ph uicontrol">Acquire Heap Dump...</span></span>
+			menu item.
+			</p>
+
+			
+			<p class="p">Depending on the concrete execution environment the pre-installed heap dump
+			providers may work with their default settings and in this case a list of
+			running Java processes should appear: 
+			</p>
+
+			<img class="image" src="../mimes/acquire.png" alt="Select a process to be dumped"/>
+			<p class="p">
+			One can now from which process a heap dump should be acquired, provide a preferred
+			location for the heap dump and press <span class="ph uicontrol">Finish</span> to acquire the dump. Some of the heap
+			dump providers may allow (or require) additional parameters (e.g. type of 
+			the heap dump) to be set. This can be done by going to the <span class="ph menucascade"><span class="ph uicontrol">Next</span></span> page of the 
+			wizard.  
+			</p>
+
+			<p class="p"><em class="ph i">Configuring the Heap Dump Providers</em></p>
+
+			<p class="p">
+			If the process list is empty try to configure the available heap dump providers. To do this
+			press <span class="ph uicontrol">Configure...</span>, select a matching provider from the list and click on it. 
+			You can see then what are the required settings and specify them.
+			</p>
+
+			
+			<p class="p"><strong class="ph b">Multiple snapshots in one heap dump</strong></p>
+
+			<div class="p">
+			Occasionally heap dumps files can be generated which contain multiple heap dumps snapshots.
+			If an HPROF dump is generated using 
+			<pre class="pre codeblock">-agentlib:hprof=heap=dump,format=b</pre>
+
+			then if a heap dump is triggered multiple times all the heap dumps will be written to one file.
+			An IBM z/OS system dump can contain data from multiple address spaces and processes.
+			It is therefore possible that the dump file contains heap dump snapshots from multiple Java runtimes.
+			</div>
+
+			<p class="p">
+			Memory Analyzer 1.2 and earlier handled this situation by choosing the first heap dump snapshot found unless another
+			was selected via an environment variable or MAT DTFJ configuration option.
+			</p>
+
+			<p class="p">
+			Memory Analyzer 1.3 handles this situation by detecting the multiple dumps, then presenting a dialog
+			for the user to select the required snapshot.
+			</p>
+
+			<img class="image" src="../mimes/multiple_snapshots.png" alt="Choose a snapshot to be analyzed"/>
+			<p class="p">
+			The index files generated have a component in the file name from the snapshot identifier, so the index
+			files from each snapshot can be distinguished.
+			This means that multiple snapshots from one heap dump file can be examined in Memory Analyzer
+			simultaneously. 
+			The heap dump history for the file remembers the last snapshot selected for that file, though when
+			the snapshot is reopened via the history the index file is also shown in the history.
+			To open another snapshot in the dump, close the first snapshot, then reopen the heap dump file using the File menu and
+			another snapshot can be chosen to be parsed.
+			The first snapshot can then be reopened using the index file in the history, and both snapshots can
+			be viewed at once.
+			</p>
+
+			
+			<p class="p"><strong class="ph b">Summary</strong></p>
+
+			<p class="p">The following table shows the availability of VM options and tools on the various platforms:</p>
+
+			
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<thead class="thead" align="left">
+						<tr class="row">
+							<th class="entry" valign="top" width="7.142857142857142%" id="d8053e347">Vendor</th>
+
+							<th class="entry" valign="top" width="14.285714285714285%" id="d8053e350">Release</th>
+
+							<th class="entry" colspan="3" valign="top" id="d8053e353">VM Parameter</th>
+
+							<th class="entry" colspan="2" valign="top" id="d8053e356">Sun Tools</th>
+
+							<th class="entry" valign="top" width="7.142857142857142%" id="d8053e359">SAP Tool</th>
+
+							<th class="entry" valign="top" width="14.285714285714285%" id="d8053e363">MAT</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr class="row">
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e347 "> </td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 "> </td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">On out of memory</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">On Ctrl+Break</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">Agent</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">JMap</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">JConsole</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">JVMMon</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">acquire heap dump</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" rowspan="5" valign="top" width="7.142857142857142%" headers="d8053e347 ">Sun, HP</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.4.2_12</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 "> </td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 "> </td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 "> </td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">No</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.5.0_07</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes (Since 1.5.0_15)</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">Yes (Only Solaris and Linux)</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 "> </td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 "> </td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">Yes (Only Solaris and Linux)</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.6.0_00</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 "></td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">Yes</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.7.0</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 "> </td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">Yes</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.8.0</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 "> </td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">Yes</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e347 ">SAP</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">Any 1.5.0</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">Yes (Only Solaris and Linux)</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 "> </td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 "> </td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" rowspan="6" valign="top" width="7.142857142857142%" headers="d8053e347 ">IBM</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.4.2 SR12</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">No</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.5.0 SR8a</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">No</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.6.0 SR2</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">No</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.6.0 SR6</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">Yes</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.7.0</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">Yes</td>
+
+						</tr>
+
+						<tr class="row">
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e350 ">1.8.0 Beta</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e353 ">Yes</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e353 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e356 ">No</td>
+
+							<td class="entry" valign="top" width="7.142857142857142%" headers="d8053e359 ">No</td>
+
+							<td class="entry" valign="top" width="14.285714285714285%" headers="d8053e363 ">Yes</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
