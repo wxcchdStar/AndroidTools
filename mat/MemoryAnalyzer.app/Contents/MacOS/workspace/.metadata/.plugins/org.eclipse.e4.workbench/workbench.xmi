@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_sNCp8T9AEeWHK8hoW_0Fog" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_sNCp8j9AEeWHK8hoW_0Fog" bindingContexts="_sNCp-D9AEeWHK8hoW_0Fog">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.mat.ui.editors.HeapEditor&quot; name=&quot;0315.hprof&quot; tooltip=&quot;/Users/chenhd/Desktop/0315.hprof&quot;>&#xA;&lt;persistable uri=&quot;file:/Users/chenhd/Desktop/0315.hprof&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.mat.ui.editors.HeapEditor&quot; name=&quot;memory-20190125T111449.hprof&quot; tooltip=&quot;/Users/chenhd/Downloads/memory-20190125T111449.hprof&quot;>&#xA;&lt;persistable uri=&quot;file:/Users/chenhd/Downloads/memory-20190125T111449.hprof&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.mat.ui.editors.HeapEditor&quot; name=&quot;0315.hprof&quot; tooltip=&quot;/Users/chenhd/Desktop/0315.hprof&quot;>&#xA;&lt;persistable uri=&quot;file:/Users/chenhd/Desktop/0315.hprof&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.mat.scheme</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_sNCp8j9AEeWHK8hoW_0Fog" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_sjHnoD9AEeWHK8hoW_0Fog" x="21" y="57" width="1440" height="873">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_sNCp8j9AEeWHK8hoW_0Fog" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_sjHnoD9AEeWHK8hoW_0Fog" x="21" y="57" width="1440" height="900">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -11,8 +11,7 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId"/>
     <tags>topLevel</tags>
-    <tags>shellMaximized</tags>
-    <children xsi:type="basic:PartSashContainer" xmi:id="_sjHnoD9AEeWHK8hoW_0Fog" selectedElement="_sjHnoT9AEeWHK8hoW_0Fog" horizontal="true">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_sjHnoD9AEeWHK8hoW_0Fog" selectedElement="_sjHnoj9AEeWHK8hoW_0Fog" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_sjHnoT9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_slQ8sD9AEeWHK8hoW_0Fog">
         <children xsi:type="advanced:Perspective" xmi:id="_slQ8sD9AEeWHK8hoW_0Fog" elementId="org.eclipse.mat.ui.perspective" selectedElement="_slQ8sT9AEeWHK8hoW_0Fog" label="Memory Analysis" iconURI="platform:/plugin/org.eclipse.mat.ui/$nl$/icons/memory_analyzer_perspective.gif">
           <persistedState key="persp.hiddenItems" value="persp.hideToolbarSC:print,"/>
@@ -28,10 +27,9 @@
           <tags>persp.actionSet:org.eclipse.mat.ui.actionSet.openExternalFile</tags>
           <tags>persp.actionSet:org.eclipse.mat.ui.actionSet.openIconAssist</tags>
           <tags>persp.actionSet:org.eclipse.mat.ui.actionSet.openAcquireDialog</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_slQ8sT9AEeWHK8hoW_0Fog" selectedElement="_slQ8sj9AEeWHK8hoW_0Fog" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_slQ8sT9AEeWHK8hoW_0Fog" selectedElement="_slQ8uD9AEeWHK8hoW_0Fog" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_slQ8sj9AEeWHK8hoW_0Fog" containerData="2600" selectedElement="_slQ8sz9AEeWHK8hoW_0Fog">
               <children xsi:type="basic:PartStack" xmi:id="_slQ8sz9AEeWHK8hoW_0Fog" elementId="topLeft" containerData="6000" selectedElement="_slQ8tD9AEeWHK8hoW_0Fog">
-                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_slQ8tD9AEeWHK8hoW_0Fog" elementId="org.eclipse.mat.ui.views.InspectorView" ref="_slNSUD9AEeWHK8hoW_0Fog"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_slQ8tT9AEeWHK8hoW_0Fog" elementId="org.eclipse.mat.ui.views.SnapshotDetailsView" toBeRendered="false" ref="_slPHgD9AEeWHK8hoW_0Fog"/>
               </children>
@@ -50,9 +48,10 @@
           </children>
         </children>
       </children>
-      <children xsi:type="basic:PartStack" xmi:id="_sjHnoj9AEeWHK8hoW_0Fog" elementId="stickyFolderRight" toBeRendered="false" containerData="2500">
+      <children xsi:type="basic:PartStack" xmi:id="_sjHnoj9AEeWHK8hoW_0Fog" elementId="stickyFolderRight" containerData="2500" selectedElement="_sjHnpD9AEeWHK8hoW_0Fog">
+        <tags>active</tags>
         <children xsi:type="advanced:Placeholder" xmi:id="_sjHnoz9AEeWHK8hoW_0Fog" elementId="org.eclipse.help.ui.HelpView" toBeRendered="false" ref="_sjGZgD9AEeWHK8hoW_0Fog"/>
-        <children xsi:type="advanced:Placeholder" xmi:id="_sjHnpD9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.internal.introview" toBeRendered="false" ref="_sjHAkD9AEeWHK8hoW_0Fog"/>
+        <children xsi:type="advanced:Placeholder" xmi:id="_sjHnpD9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.internal.introview" ref="_sjHAkD9AEeWHK8hoW_0Fog"/>
         <children xsi:type="advanced:Placeholder" xmi:id="_sjHnpT9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.cheatsheets.views.CheatSheetView" toBeRendered="false" ref="_sjHAkT9AEeWHK8hoW_0Fog"/>
       </children>
     </children>
@@ -65,11 +64,12 @@
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <tags>activeOnClose</tags>
+      <tags>active</tags>
       <menus xmi:id="_swCpUD9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.internal.introview">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_swCpUT9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.internal.introview" visible="false"/>
+      <toolbar xmi:id="_swCpUT9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.internal.introview"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_sjHAkT9AEeWHK8hoW_0Fog" elementId="org.eclipse.ui.cheatsheets.views.CheatSheetView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Cheat Sheets" iconURI="platform:/plugin/org.eclipse.ui.cheatsheets/icons/view16/cheatsheet_view.gif" tooltip="" closeable="true">
       <tags>View</tags>
@@ -86,8 +86,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Memory Analyzer Views</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_smhg8D9AEeWHK8hoW_0Fog" elementId="org.eclipse.mat.ui.views.InspectorView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -182,10 +180,10 @@
     <bindings xmi:id="_sN0GBj9AEeWHK8hoW_0Fog" keySequence="COMMAND+Y" command="_sNcSpT9AEeWHK8hoW_0Fog"/>
     <bindings xmi:id="_sN0GBz9AEeWHK8hoW_0Fog" keySequence="COMMAND+W" command="_sNcSsD9AEeWHK8hoW_0Fog"/>
     <bindings xmi:id="_sN0GCD9AEeWHK8hoW_0Fog" keySequence="ALT+A" command="_sNcSkT9AEeWHK8hoW_0Fog"/>
-    <bindings xmi:id="_jZUhQXcJEeWu_Y59AZMMGw" keySequence="COMMAND+CTRL+F" command="_sN4-gz9AEeWHK8hoW_0Fog"/>
+    <bindings xmi:id="_7LjXMSOFEemO3tY9oyQKZg" keySequence="COMMAND+CTRL+F" command="_sN4-gz9AEeWHK8hoW_0Fog"/>
   </bindingTables>
   <bindingTables xmi:id="_sN4-ij9AEeWHK8hoW_0Fog" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_sNCp-z9AEeWHK8hoW_0Fog">
-    <bindings xmi:id="_jZUhQncJEeWu_Y59AZMMGw" keySequence="M1+W" command="_sN4-iD9AEeWHK8hoW_0Fog"/>
+    <bindings xmi:id="_7LjXMiOFEemO3tY9oyQKZg" keySequence="M1+W" command="_sN4-iD9AEeWHK8hoW_0Fog"/>
   </bindingTables>
   <bindingTables xmi:id="_slLdIT9AEeWHK8hoW_0Fog" bindingContext="_slLdID9AEeWHK8hoW_0Fog"/>
   <bindingTables xmi:id="_slMEMT9AEeWHK8hoW_0Fog" bindingContext="_slMEMD9AEeWHK8hoW_0Fog"/>

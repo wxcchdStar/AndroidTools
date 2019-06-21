@@ -167,3 +167,177 @@ Caused by: org.eclipse.swt.SWTException: Invalid thread access
 
 !ENTRY org.eclipse.core.jobs 2 2 2015-10-20 18:45:08.934
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.ProgressViewUpdater$1
+!SESSION 2019-01-25 11:15:49.154 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -keyring /Users/chenhd/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/chenhd/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.mat.ui 4 0 2019-01-25 11:16:40.370
+!MESSAGE Error opening heap dump 'memory-20190125T111449.hprof'. Check the error log for further details.
+!STACK 0
+org.eclipse.mat.SnapshotException: Error opening heap dump 'memory-20190125T111449.hprof'. Check the error log for further details.
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:268)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: Unknown HPROF Version (JAVA PROFILE 1.0.3)
+	at org.eclipse.mat.hprof.AbstractParser.readVersion(AbstractParser.java:132)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:84)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	... 4 more
+!SUBENTRY 1 org.eclipse.mat.ui 4 0 2019-01-25 11:16:40.371
+!MESSAGE Unknown HPROF Version (JAVA PROFILE 1.0.3) (java.io.IOException)
+!STACK 0
+java.io.IOException: Unknown HPROF Version (JAVA PROFILE 1.0.3)
+	at org.eclipse.mat.hprof.AbstractParser.readVersion(AbstractParser.java:132)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:84)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.mat.ui 2 0 2019-01-25 11:17:56.092
+!MESSAGE Problem listing IBM VM processes using /Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/bin/java rc = 1 : Error: Unable to locate JRE meeting specification "1.6+"
+
+
+!ENTRY org.eclipse.mat.ui 4 0 2019-01-25 11:18:27.527
+!MESSAGE Error opening heap dump 'memory-20190125T111449.hprof'. Check the error log for further details.
+!STACK 0
+org.eclipse.mat.SnapshotException: Error opening heap dump 'memory-20190125T111449.hprof'. Check the error log for further details.
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:268)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: Unknown HPROF Version (JAVA PROFILE 1.0.3)
+	at org.eclipse.mat.hprof.AbstractParser.readVersion(AbstractParser.java:132)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:84)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	... 4 more
+!SUBENTRY 1 org.eclipse.mat.ui 4 0 2019-01-25 11:18:27.527
+!MESSAGE Unknown HPROF Version (JAVA PROFILE 1.0.3) (java.io.IOException)
+!STACK 0
+java.io.IOException: Unknown HPROF Version (JAVA PROFILE 1.0.3)
+	at org.eclipse.mat.hprof.AbstractParser.readVersion(AbstractParser.java:132)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:84)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-25 11:28:50.116
+!MESSAGE Heap /Users/chenhd/Downloads/memory-20190125T111449_convert.hprof contains 263,457 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-25 11:28:51.060
+!MESSAGE Removed 59,750 unreachable objects using 7,930,264 bytes
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-25 11:31:37.822
+!MESSAGE Ignoring collection java.util.Collections$UnmodifiableCollection @ 0x12fdeb20
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.mat.internal.collectionextract.NoContentCollectionExtractor.getSize(NoContentCollectionExtractor.java:32)
+	at org.eclipse.mat.inspections.collectionextract.AbstractExtractedCollection.size(AbstractExtractedCollection.java:158)
+	at org.eclipse.mat.internal.collectionextract.WrapperCollectionExtractor.getSize(WrapperCollectionExtractor.java:52)
+	at org.eclipse.mat.inspections.collectionextract.AbstractExtractedCollection.size(AbstractExtractedCollection.java:158)
+	at org.eclipse.mat.inspections.collections.CollectionsBySizeQuery.runQuantizer(CollectionsBySizeQuery.java:97)
+	at org.eclipse.mat.inspections.collections.CollectionsBySizeQuery.execute(CollectionsBySizeQuery.java:79)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.snapshot.query.SnapshotQuery.execute(SnapshotQuery.java:260)
+	at org.eclipse.mat.snapshot.query.SnapshotQuery.refine(SnapshotQuery.java:270)
+	at org.eclipse.mat.inspections.component.ComponentReportQuery.addEmptyCollections(ComponentReportQuery.java:427)
+	at org.eclipse.mat.inspections.component.ComponentReportQuery.execute(ComponentReportQuery.java:114)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.snapshot.query.SnapshotQuery.execute(SnapshotQuery.java:260)
+	at org.eclipse.mat.inspections.component.TopComponentsReportQuery.execute(TopComponentsReportQuery.java:67)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.query.registry.CommandLine.execute(CommandLine.java:93)
+	at org.eclipse.mat.report.internal.QueryPart.execute(QueryPart.java:96)
+	at org.eclipse.mat.report.TestSuite.execute(TestSuite.java:129)
+	at org.eclipse.mat.report.internal.RunRegisterdReport.execute(RunRegisterdReport.java:50)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.ui.QueryExecution$ExecutionJob.run(QueryExecution.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-25 11:31:37.822
+!MESSAGE Ignoring collection java.util.Collections$UnmodifiableCollection @ 0x12fdeb40
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.mat.internal.collectionextract.NoContentCollectionExtractor.getSize(NoContentCollectionExtractor.java:32)
+	at org.eclipse.mat.inspections.collectionextract.AbstractExtractedCollection.size(AbstractExtractedCollection.java:158)
+	at org.eclipse.mat.internal.collectionextract.WrapperCollectionExtractor.getSize(WrapperCollectionExtractor.java:52)
+	at org.eclipse.mat.inspections.collectionextract.AbstractExtractedCollection.size(AbstractExtractedCollection.java:158)
+	at org.eclipse.mat.inspections.collections.CollectionsBySizeQuery.runQuantizer(CollectionsBySizeQuery.java:97)
+	at org.eclipse.mat.inspections.collections.CollectionsBySizeQuery.execute(CollectionsBySizeQuery.java:79)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.snapshot.query.SnapshotQuery.execute(SnapshotQuery.java:260)
+	at org.eclipse.mat.snapshot.query.SnapshotQuery.refine(SnapshotQuery.java:270)
+	at org.eclipse.mat.inspections.component.ComponentReportQuery.addEmptyCollections(ComponentReportQuery.java:427)
+	at org.eclipse.mat.inspections.component.ComponentReportQuery.execute(ComponentReportQuery.java:114)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.snapshot.query.SnapshotQuery.execute(SnapshotQuery.java:260)
+	at org.eclipse.mat.inspections.component.TopComponentsReportQuery.execute(TopComponentsReportQuery.java:67)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.query.registry.CommandLine.execute(CommandLine.java:93)
+	at org.eclipse.mat.report.internal.QueryPart.execute(QueryPart.java:96)
+	at org.eclipse.mat.report.TestSuite.execute(TestSuite.java:129)
+	at org.eclipse.mat.report.internal.RunRegisterdReport.execute(RunRegisterdReport.java:50)
+	at org.eclipse.mat.query.registry.ArgumentSet.execute(ArgumentSet.java:132)
+	at org.eclipse.mat.ui.QueryExecution$ExecutionJob.run(QueryExecution.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2019-01-29 13:22:50.047 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -keyring /Users/chenhd/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/chenhd/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.mat.ui 4 0 2019-01-29 13:29:54.684
+!MESSAGE Error opening heap dump 'memory-20190129T132613_converted.hprof'. Check the error log for further details.
+!STACK 0
+org.eclipse.mat.SnapshotException: Error opening heap dump 'memory-20190129T132613_converted.hprof'. Check the error log for further details.
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:268)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: Invalid HPROF file header.
+	at org.eclipse.mat.hprof.AbstractParser.readVersion(AbstractParser.java:143)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:84)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	... 4 more
+!SUBENTRY 1 org.eclipse.mat.ui 4 0 2019-01-29 13:29:54.685
+!MESSAGE Invalid HPROF file header. (java.io.IOException)
+!STACK 0
+java.io.IOException: Invalid HPROF file header.
+	at org.eclipse.mat.hprof.AbstractParser.readVersion(AbstractParser.java:143)
+	at org.eclipse.mat.hprof.Pass1Parser.read(Pass1Parser.java:84)
+	at org.eclipse.mat.hprof.HprofIndexBuilder.fill(HprofIndexBuilder.java:80)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.parse(SnapshotFactoryImpl.java:222)
+	at org.eclipse.mat.parser.internal.SnapshotFactoryImpl.openSnapshot(SnapshotFactoryImpl.java:126)
+	at org.eclipse.mat.snapshot.SnapshotFactory.openSnapshot(SnapshotFactory.java:145)
+	at org.eclipse.mat.ui.snapshot.ParseHeapDumpJob.run(ParseHeapDumpJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-29 13:31:10.404
+!MESSAGE Heap /Users/chenhd/Downloads/memory-20190129T133027-converted.hprof contains 91,544 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-29 13:31:10.820
+!MESSAGE Removed 12,607 unreachable objects using 491,320 bytes
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-29 13:33:42.238
+!MESSAGE Heap /Users/chenhd/Downloads/memory-20190129T133304-converted.hprof contains 86,652 objects
+
+!ENTRY org.eclipse.mat.ui 1 0 2019-01-29 13:33:42.446
+!MESSAGE Removed 10,219 unreachable objects using 387,752 bytes
